@@ -36,20 +36,20 @@ body {
 }
 
 .sky {
-  background-image: url("fb-game-background.png");
+  background-image: url('fb-game-background.png');
   width: 500px;
   height: 580px;
   position: absolute;
 }
 .bird {
-  background-image: url("flappy-bird.png");
+  background-image: url('flappy-bird.png');
 
   position: absolute;
   height: 45px;
   width: 60px;
 }
 .ground {
-  background-image: url("bottom-background.png");
+  background-image: url('bottom-background.png');
   width: 500px;
   height: 150px;
   position: absolute;
@@ -58,16 +58,50 @@ body {
 }
 
 .obstacle {
-  background-image: url("flappybird-pipe.png");
+  background-image: url('flappybird-pipe.png');
   width: 60px;
   height: 300px;
   position: absolute;
 }
 
 .topObstacle {
-  background-image: url("flappybird-pipe.png");
+  background-image: url('flappybird-pipe.png');
   transform: rotate(180deg);
   width: 60px;
   height: 300px;
   position: absolute;
+}
+
+.newGame {
+  display: none;
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  right: 29%;
+}
+._active {
+  display: block;
+}
+
+.pushable {
+  background: hsla(184, 50%, 50%, 1);
+  border-radius: 12px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 2px;
+}
+
+.front {
+  display: block;
+  padding: 12px 42px;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  background: hsla(184, 100%, 50%, 1);
+  color: white;
+  transform: translateY(-6px);
+}
+
+.pushable:active .front {
+  transform: translateY(-2px);
 }
