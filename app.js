@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const bird = document.querySelector('.bird');
     const gameDisplay = document.querySelector('.game-container');
     const ground = document.querySelector('.ground');
+    const newGame = document.querySelector('.newGame');
 
     let birdLeft = 220;
     let birdBottom = 100;
@@ -83,8 +84,17 @@ document.addEventListener('DOMContentLoaded', () => {
         clearInterval(gameTimerId);
         isGameOver = true;
         document.removeEventListener('keyup', control);
+        newGame.classList.add('_active');
+
 
     }
     document.addEventListener('keyup', control)
+    document.addEventListener('click', (event) => {
+        if (event.target.classList.contains('front')) {
+          setTimeout(() => {
+            window.location.reload();   
+          }, 200);
+        }
+      });
 
 })
